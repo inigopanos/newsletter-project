@@ -1,17 +1,10 @@
 <script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue'
-import Newsletter from './components/newsletter-component/Newsletter.vue';
+import Newsletter from './components/newsletter-component/Newsletter.vue'
 </script>
 
 <template>
-  <header>
-    <div class="wrapper">
-      <Newsletter/>
-    </div>
-  </header>
-
-  <main>
-  </main>
+  <header></header>
+  <Newsletter />
 </template>
 
 <style scoped>
