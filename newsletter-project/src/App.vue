@@ -3,7 +3,6 @@ import Newsletter from './components/newsletter-component/Newsletter.vue'
 </script>
 
 <template>
-  <header></header>
   <Newsletter />
 </template>
 
