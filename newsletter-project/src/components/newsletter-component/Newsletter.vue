@@ -64,6 +64,11 @@ export default {
 </script>
 
 <style scoped lang="scss">
+@font-face {
+  font-family: 'Roboto-Bold';
+  src: url('../../assets/fonts/Roboto-Bold.ttf');
+}
+
 body {
   background-color: hsl(235, 18%, 26%);
 
@@ -86,9 +91,13 @@ body {
   color: black;
 
   h1 {
-    font-family: 'Roboto', sans-serif;
-    src: url('../../assets/fonts/Roboto-Bold.ttf');
+    font-family: 'Roboto-Bold', sans-serif;
     font-weight: 700;
+    font-size: 3rem;
+  }
+
+  p{
+    font-size: 16px;
   }
 
   &__signup {
@@ -139,7 +148,11 @@ body {
     padding: 0.5rem 1rem;
     border-radius: 5px;
     margin-top: 1rem;
+    width: 350px;
     cursor: pointer;
+  }
+  .submit-button:hover{
+    background-color: hsl(4, 100%, 67%);
   }
 
   .v-text {
