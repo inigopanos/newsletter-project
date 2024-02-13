@@ -11,15 +11,20 @@
           <h1>Stay updated!</h1>
           <p>Join 60,000+ product managers receiving monthly updates on:</p>
           <ul>
-            <li>Product discovery and building what matters</li>
-            <li>Measuring to ensure updates are a success</li>
-            <li>And much more!</li>
+            <li><span class="icon-check"></span> Product discovery and building what matters</li>
+            <li><span class="icon-check"></span> Measuring to ensure updates are a success</li>
+            <li><span class="icon-check"></span> And much more!</li>
           </ul>
 
           <form action="submit">
-            <p>Email address</p>
-            <input type="text" name="email" id="" placeholder="email@company.com" />
-            <button>Subscribe to monthly newsletter</button>
+            <p><b>Email address</b></p>
+            <v-text-field
+              placeholder="email@company.com"
+              type="email"
+              variant="outlined"
+              class="v-text"
+            ></v-text-field>
+            <button class="submit-button">Subscribe to monthly newsletter</button>
           </form>
         </div>
       </div>
@@ -73,21 +78,23 @@ body {
   color: red;
   margin: 1rem;
   padding: 1rem 1rem 1rem 2rem;
+  width: 85%;
 
   font-family: 'Roboto', sans-serif;
   src: url('../../assets/fonts/Roboto-Regular.ttf');
   font-size: 16px;
   color: black;
 
-  h1{
+  h1 {
     font-family: 'Roboto', sans-serif;
     src: url('../../assets/fonts/Roboto-Bold.ttf');
-    font-weight: 700 ;
+    font-weight: 700;
   }
 
   &__signup {
     display: flex;
     flex-direction: row-reverse;
+    justify-content: flex-end;
 
     img {
       width: 20rem;
@@ -99,7 +106,11 @@ body {
       flex-direction: column;
       justify-content: space-evenly;
 
-      ul{
+      p {
+        max-width: 20rem;
+      }
+
+      ul {
         margin-block-start: 0;
         padding-inline-start: 20px;
         margin-inline-end: 1rem;
@@ -108,15 +119,32 @@ body {
 
         list-style-image: url(../../assets/images/icon-list.svg);
 
-        li{
-          ::marker{
+        li {
+          ::marker {
             padding: 0;
             margin: 0;
+            vertical-align: middle;
+            display: inline-block;
           }
           padding-left: 1rem;
         }
       }
     }
+  }
+
+  .submit-button {
+    background-color: hsl(235, 18%, 26%);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    margin-top: 1rem;
+    cursor: pointer;
+  }
+
+  .v-text {
+    width: 350px;
+    cursor: pointer;
   }
 }
 </style>
