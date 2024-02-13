@@ -23,26 +23,27 @@
               type="email"
               variant="outlined"
               class="v-text"
+              id="email"
             ></v-text-field>
             <button class="submit-button">Subscribe to monthly newsletter</button>
           </form>
         </div>
       </div>
-
-      <!-- Sign-up form end -->
-
-      <!-- Success message start -->
-      <!-- <div class="newsletter__message">
-        <h2>Thanks for subscribing!</h2>
-        <p>
-          A confirmation email has been sent to ash@loremcompany.com. Please open it and click the
-          button inside to confirm your subscription.
-        </p>
-
-        <button>Dismiss message</button>
-      </div> -->
-      <!-- Success message end -->
     </div>
+    <!-- Sign-up form end -->
+
+    <!-- Success message start -->
+    <div class="confirm__message">
+      <img src="../../assets/images/icon-success.svg" alt="">
+      <h2>Thanks for subscribing!</h2>
+      <p>
+        A confirmation email has been sent to <b>correo@company.com</b>. Please open it and click the
+        button inside to confirm your subscription.
+      </p>
+
+      <button>Dismiss message</button>
+    </div>
+    <!-- Success message end -->
   </body>
 </template>
 
@@ -64,6 +65,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
+
 @font-face {
   font-family: 'Roboto-Bold';
   src: url('../../assets/fonts/Roboto-Bold.ttf');
@@ -94,9 +96,10 @@ body {
     font-family: 'Roboto-Bold', sans-serif;
     font-weight: 700;
     font-size: 3rem;
+    color: hsl(235, 18%, 26%);
   }
 
-  p{
+  p {
     font-size: 16px;
   }
 
@@ -151,7 +154,7 @@ body {
     width: 350px;
     cursor: pointer;
   }
-  .submit-button:hover{
+  .submit-button:hover {
     background-color: hsl(4, 100%, 67%);
   }
 
@@ -159,5 +162,55 @@ body {
     width: 350px;
     cursor: pointer;
   }
+}
+
+.confirm__message{
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  color: black;
+  max-width: 25rem;
+  align-items: center;
+  padding: 3rem;
+  border-radius: 15px;
+
+  img{
+    align-self: flex-start;
+    width: 20%;
+    height: 50%;
+    margin: 5px;
+  }
+
+  h2{
+    font-family: 'Roboto-Bold', sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
+    width: 100%;
+    margin: 5px;
+    color: hsl(235, 18%, 26%);
+    line-height: normal;
+  }
+
+  p{
+    font-size: 16px;
+    margin: 5px;
+    width: 100%;
+  }
+
+  button {
+    background-color: hsl(235, 18%, 26%);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    margin-top: 1rem;
+    width: 100%;
+    cursor: pointer;
+  }
+  button:hover {
+    background-color: hsl(4, 100%, 67%);
+  }
+
+  
 }
 </style>
